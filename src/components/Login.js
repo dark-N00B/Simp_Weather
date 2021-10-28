@@ -1,4 +1,5 @@
 import React from 'react';
+import './Login.css';
 
 
 
@@ -7,8 +8,19 @@ import React from 'react';
 
 function Login() {
     return (
-        <div>
-            
+        <div className="main">
+            <h1>Weather App</h1>
+            <form>
+                <div>
+                    <input id="username" placeholder="Username" />
+                </div>
+                <div>
+                    <input id="password" type="password" placeholder="Password" />
+                </div>
+                <div>
+                    <button>Log In</button>
+                </div>
+            </form>
         </div>
     )
 }

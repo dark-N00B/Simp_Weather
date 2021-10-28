@@ -1,4 +1,6 @@
 import React from 'react';
+import Login from './components/Login';
+import Weather from './components/Weather';
 
 
 
@@ -7,7 +9,8 @@ import React from 'react';
 function App() {
     return (
         <div>
-            Hello
+            {/*<Weather />*/}
+            <Login />
         </div>
     )
 }
