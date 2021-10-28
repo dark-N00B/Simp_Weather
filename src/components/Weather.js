@@ -3,14 +3,16 @@ import API_KEY from '../API_KEY';
 import Current from './_weather_cards/Current';
 import './Weather.css';
 import Forecast from './_weather_cards/Forecast';
+import AboutPanel from './AboutPanel';
 
-
+export const cityArray = ['Delhi', 'Mumbai', 'Kerala', 'Manipur'];
 
 
 function Weather() {
 
     const [weatherData, setWeatherData] = useState(null);
     const [city, setCity] = useState('Delhi');
+    const [showPanel, setShowPanel] = useState(false);
 
     useEffect(() => {
         async function fetchData() {
@@ -21,22 +23,29 @@ function Weather() {
         }
 
         fetchData();
-    },[city])
+    }, [city])
     return (
-        <div className="weatherDiv">
-            <div className="cityDiv">
-                City Chooser
-            </div>
-            <div className="weatherInfo">
-                <div className="currentWeatherDiv">
-                    {weatherData!=null ? <Current weatherData={weatherData} /> : <></>}
+        <div className="mainDiv">
+            {showPanel ? <AboutPanel /> : <></>}
+            <div className="weatherDiv">
+                <div className="cityDiv">
+                    <select className="cityDropdown" onChange={(e)=>setCity(e.target.value)}>
+                        {cityArray.map((item, key) => {
+                            return <option key={key} value={item}>{item}</option>
+                        })}
+                    </select>
                 </div>
-                <div className="forecastDiv">
-                    <Forecast />
+                <div className="weatherInfo">
+                    <div className="currentWeatherDiv">
+                        {weatherData != null ? <Current weatherData={weatherData} /> : <></>}
+                    </div>
+                    <div className="forecastDiv">
+                        <Forecast />
+                    </div>
                 </div>
-            </div>
-            <button className="aboutBtn">About Us</button>
+                <button onClick={() => setShowPanel(!showPanel)} className="aboutBtn">About Us</button>
 
+            </div>
         </div>
     )
 }

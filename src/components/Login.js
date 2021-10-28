@@ -24,20 +24,20 @@ function Login() {
         <>
             {
                 isLoggedin ? <Weather /> :
-                <div className="main">
-                <h1>Weather App</h1>
-                <form onSubmit={(e)=>{onSubmitHandler(e)}}>
-                    <div>
-                        <input onChange={e=>setUserName(e.target.value)} id="username" placeholder="Username" />
+                    <div className="main">
+                        <h1>Weather App</h1>
+                        <form onSubmit={(e) => { onSubmitHandler(e) }}>
+                            <div>
+                                <input onChange={e => setUserName(e.target.value)} id="username" placeholder="Username" />
+                            </div>
+                            <div>
+                                <input onChange={e => setPassword(e.target.value)} id="password" type="password" placeholder="Password" />
+                            </div>
+                            <div>
+                                <button className="loginBtn" type="submit">Log In</button>
+                            </div>
+                        </form>
                     </div>
-                    <div>
-                        <input onChange={e => setPassword(e.target.value)} id="password" type="password" placeholder="Password" />
-                    </div>
-                    <div>
-                        <button className="loginBtn" type="submit">Log In</button>
-                    </div>
-                </form>
-            </div>
             }
         </>
     )

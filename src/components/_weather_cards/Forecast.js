@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Forecast.css'
 
 
 
@@ -6,9 +7,10 @@ import React from 'react'
 
 
 
-function Forecast() {
+function Forecast({ forecastData }) {
+    console.log(forecastData)
     return (
-        <div>
+        <div className="forecastCard">
             5 Day ForeCast
         </div>
     )
