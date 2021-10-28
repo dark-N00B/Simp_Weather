@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
+import Weather from './Weather';
 
 
 
@@ -7,21 +8,38 @@ import './Login.css';
 
 
 function Login() {
+
+    const [userName, setUserName] = useState('');
+    const [password, setPassword] = useState('');
+    const [isLoggedin, setIsLoggedin] = useState(false);
+
+    function onSubmitHandler(e) {
+        e.preventDefault();
+        if (userName === 'admin' && password === 'admin') {
+            setIsLoggedin(true);
+        }
+    }
+
     return (
-        <div className="main">
-            <h1>Weather App</h1>
-            <form>
-                <div>
-                    <input id="username" placeholder="Username" />
-                </div>
-                <div>
-                    <input id="password" type="password" placeholder="Password" />
-                </div>
-                <div>
-                    <button>Log In</button>
-                </div>
-            </form>
-        </div>
+        <>
+            {
+                isLoggedin ? <Weather /> :
+                <div className="main">
+                <h1>Weather App</h1>
+                <form onSubmit={(e)=>{onSubmitHandler(e)}}>
+                    <div>
+                        <input onChange={e=>setUserName(e.target.value)} id="username" placeholder="Username" />
+                    </div>
+                    <div>
+                        <input onChange={e => setPassword(e.target.value)} id="password" type="password" placeholder="Password" />
+                    </div>
+                    <div>
+                        <button type="submit">Log In</button>
+                    </div>
+                </form>
+            </div>
+            }
+        </>
     )
 }
 

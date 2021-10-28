@@ -1,0 +1,10 @@
+.weatherDiv{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.weatherInfo {
+    display: flex;
+    flex-direction: column;
+}
