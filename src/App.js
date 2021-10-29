@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from './components/Login';
-import Weather from './components/Weather';
+//import Weather from './components/Weather';
+import Routes from './routes/Routes';
 
 
 
@@ -11,6 +12,7 @@ function App() {
         <div>
             {/*<Weather />*/}
             <Login />
+            <Routes />
         </div>
     )
 }

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import API_KEY from '../API_KEY';
+import React, { useState } from 'react';
 import Current from './_weather_cards/Current';
 import './Weather.css';
 import Forecast from './_weather_cards/Forecast';
@@ -10,20 +9,11 @@ export const cityArray = ['Delhi', 'Mumbai', 'Kerala', 'Manipur'];
 
 function Weather() {
 
-    const [weatherData, setWeatherData] = useState(null);
+    
     const [city, setCity] = useState('Delhi');
     const [showPanel, setShowPanel] = useState(false);
 
-    useEffect(() => {
-        async function fetchData() {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
-            const jsonData = await response.json();
-            //console.log(jsonData)
-            setWeatherData(jsonData);
-        }
-
-        fetchData();
-    }, [city])
+    
     return (
         <div className="mainDiv">
             {showPanel ? <AboutPanel /> : <></>}
@@ -37,10 +27,10 @@ function Weather() {
                 </div>
                 <div className="weatherInfo">
                     <div className="currentWeatherDiv">
-                        {weatherData != null ? <Current weatherData={weatherData} /> : <></>}
+                        <Current city={city} />
                     </div>
                     <div className="forecastDiv">
-                        <Forecast />
+                        <Forecast city={city} />
                     </div>
                 </div>
                 <button onClick={() => setShowPanel(!showPanel)} className="aboutBtn">About Us</button>

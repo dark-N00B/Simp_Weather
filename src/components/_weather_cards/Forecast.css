@@ -1,3 +1,15 @@
 .forecastCard {
     padding: 10px;
+    display: flex;
+    max-width: 40vw;
+    overflow-x: auto;
+}
+
+
+
+.forecastDays {
+    display: inline;
+    margin: 5px;
+    
+
 }
