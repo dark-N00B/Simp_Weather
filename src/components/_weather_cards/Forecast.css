@@ -3,6 +3,7 @@
     display: flex;
     max-width: 40vw;
     overflow-x: auto;
+    overflow-y: hidden;
 }
 
 
@@ -10,7 +11,14 @@
 .forecastDays {
     display: inline;
     margin: 5px;
-    box-shadow: 0px 0px 3px;
+    box-shadow: 0px 0px 5px grey;
     height: 30vh;
     border-radius: 5px;
 }
+
+/*
+.forecastDays:hover {
+    transition-duration: 1s;
+    transform: none;
+}
+*/

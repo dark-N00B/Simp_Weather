@@ -23,9 +23,10 @@ function Current({ city }) {
 
     return (
         <div className="currentWeatherCard">
-            Feels Like : {weatherData != null ? weatherData.main.feels_like : "Loading"} °C <br/>
-            Maximum Temp : {weatherData != null ? weatherData.main.temp_max : "Loading"} °C <br/>
-            Minimum Temp : {weatherData != null ? weatherData.main.temp_min : "Loading"} °C <br/>
+            <h2>Feels Like</h2>
+            <div className="feel">{/*Feels Like : */}{weatherData != null ? weatherData.main.feels_like : "Loading..."}°C </div><br/>
+            Maximum Temp : {weatherData != null ? weatherData.main.temp_max : "Loading..."} °C <br/>
+            Minimum Temp : {weatherData != null ? weatherData.main.temp_min : "Loading..."} °C <br/>
         </div>
     )
 }

@@ -11,17 +11,15 @@ import { isLoggedIn } from '../actions';
 
 function Login() {
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
-    //const [isLoggedin, setIsLoggedin] = useState(false);
     const isLogged = useSelector(state => state.isLogged)
 
     function onSubmitHandler(e) {
         e.preventDefault();
         if (userName === 'admin' && password === 'admin') {
-            //setIsLoggedin(true);
             dispatch(isLoggedIn())
 
         }
