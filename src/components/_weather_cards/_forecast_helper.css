@@ -1,0 +1,11 @@
+.helperStyle {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+
+.helperStyle div {
+    width: 100px;
+    text-align: center;
+}

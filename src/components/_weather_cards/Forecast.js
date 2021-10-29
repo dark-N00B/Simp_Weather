@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import API_KEY from '../../API_KEY';
 import './Forecast.css'
+import Helper from './_forecast_helper';
 
 
 
@@ -18,7 +19,7 @@ function Forecast({ city }) {
             const jsonData = await response.json();
             const fiveDay = jsonData.list;
             //console.log(jsonData);
-            console.log(fiveDay);
+            //console.log(fiveDay);
             setForecastData(fiveDay);
         }
 
@@ -32,8 +33,7 @@ function Forecast({ city }) {
                     {forecastData.map((item, key) => {
                         return (
                             <div className="forecastDays" key={key}>
-                                {item.main.temp}°C <br />
-                                {item.dt_txt}
+                                <Helper temp={item.main.temp} date={item.dt_txt}/>
                             </div>
                         )
                     })}

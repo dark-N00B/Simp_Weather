@@ -10,6 +10,7 @@
 .forecastDays {
     display: inline;
     margin: 5px;
-    
-
+    box-shadow: 0px 0px 3px;
+    height: 30vh;
+    border-radius: 5px;
 }
