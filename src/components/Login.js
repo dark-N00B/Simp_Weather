@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Login.css';
 import Weather from './Weather';
+import { useSelector, useDispatch } from 'react-redux';
+import { isLoggedIn } from '../actions';
 
 
 
@@ -9,21 +11,26 @@ import Weather from './Weather';
 
 function Login() {
 
+    const dispatch = useDispatch()
+
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoggedin, setIsLoggedin] = useState(false);
+    //const [isLoggedin, setIsLoggedin] = useState(false);
+    const isLogged = useSelector(state => state.isLogged)
 
     function onSubmitHandler(e) {
         e.preventDefault();
         if (userName === 'admin' && password === 'admin') {
-            setIsLoggedin(true);
+            //setIsLoggedin(true);
+            dispatch(isLoggedIn())
+
         }
     }
 
     return (
         <>
             {
-                isLoggedin ? <Weather /> :
+                isLogged ? <Weather /> :
                     <div className="main">
                         <h1>Weather App</h1>
                         <form onSubmit={(e) => { onSubmitHandler(e) }}>

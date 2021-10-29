@@ -19,6 +19,7 @@ function Weather() {
             {showPanel ? <AboutPanel /> : <></>}
             <div className="weatherDiv">
                 <div className="cityDiv">
+                    <h1>Weather</h1>
                     <select className="cityDropdown" onChange={(e)=>setCity(e.target.value)}>
                         {cityArray.map((item, key) => {
                             return <option key={key} value={item}>{item}</option>
@@ -34,6 +35,7 @@ function Weather() {
                     </div>
                 </div>
                 <button onClick={() => setShowPanel(!showPanel)} className="aboutBtn">About Us</button>
+                <button className="logoutBtn" >Log Out</button>
 
             </div>
         </div>
