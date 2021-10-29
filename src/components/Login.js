@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
-import Weather from './Weather';
+//import Weather from './Weather';
+import { Redirect } from 'react-router';
 import { useSelector, useDispatch } from 'react-redux';
 import { isLoggedIn } from '../actions';
 
@@ -28,7 +29,7 @@ function Login() {
     return (
         <>
             {
-                isLogged ? <Weather /> :
+                isLogged ? <Redirect to='/weather' /> :
                     <div className="main">
                         <h1>Weather App</h1>
                         <form onSubmit={(e) => { onSubmitHandler(e) }}>
