@@ -1,16 +1,20 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import Login from '../components/Login';
+import Weather from '../components/Weather';
 
 
 
 
-
-function Routes() {
+function Routes({ isLogged }) {
+    
     return (
         <div>
             <Switch>
-                <Route exact path="/">
-                    <Redirect to="/login" />
+                <Route exact path={'/login'} component={Login} />
+                <Route exact path={'/weather'} component={Weather} />
+                <Route exact path={'/'}>
+                    {isLogged ? <Redirect to='/weather'/> : <Redirect to='/login'/>}
                 </Route>
             </Switch>
 
@@ -18,4 +22,4 @@ function Routes() {
     )
 }
 
-export default Routes
+export default Routes;
