@@ -3,7 +3,7 @@ import './Login.css';
 //import Weather from './Weather';
 import { Redirect } from 'react-router';
 import { useSelector, useDispatch } from 'react-redux';
-import { isLoggedIn } from '../actions';
+import { isLoggedIn } from '../redux/actions';
 
 
 

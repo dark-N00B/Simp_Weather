@@ -6,7 +6,7 @@ import AboutPanel from './AboutPanel';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 //import Unauthorized from './_protected_content/Unauthorized';
-import { isLoggedIn } from '../actions';
+import { isLoggedIn } from '../redux/actions';
 import { Redirect } from 'react-router';
 
 export const cityArray = ['Delhi', 'Mumbai', 'Kerala', 'Manipur'];
