@@ -26,20 +26,33 @@ function Forecast({ city }) {
         fetchData();
     }, [city])
 
+    /*function skyImage(sky) {
+        if (sky === 'Haze') return { backgroundImage: `url("https://c.tenor.com/__gznbyGLKYAAAAC/travel-rain.gif")` }
+
+    }
+
+    console.log(skyImage('Haze'))*/
+
     return (
-        <div className="forecastCard">
-            {forecastData == null ? <></> :
-                <>
-                    {forecastData.map((item, key) => {
-                        return (
-                            <div className="forecastDays" key={key}>
-                                <Helper temp={item.main.temp} date={item.dt_txt}/>
-                            </div>
-                        )
-                    })}
-                </>
-            }
-        </div>
+        <>
+            <div className="forecastCard">
+                {forecastData == null ? <></> :
+                    <>
+                        {forecastData.map((item, key) => {
+                            return (
+                                <div className="forecastDays" /*style={skyImage(item.weather[0].main)}*/ key={key}>
+                                    <Helper temp={item.main.temp} date={item.dt_txt} sky={item.weather[0].description} />
+                                </div>
+                            )
+                        })}
+                    </>
+                }
+
+            </div>
+            <div className="forecastHeader">
+                <h3>5 Days Forecast</h3>
+            </div>
+        </>
     )
 }
 

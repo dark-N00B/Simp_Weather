@@ -19,14 +19,26 @@ function Current({ city }) {
 
         fetchData();
     }, [city])
-    
+
 
     return (
         <div className="currentWeatherCard">
-            <h2>Feels Like</h2>
-            <div className="feel">{/*Feels Like : */}{weatherData != null ? weatherData.main.feels_like : "--.--"}°C </div><br/>
-            Maximum Temp : {weatherData != null ? weatherData.main.temp_max : "--.--"} °C <br/>
-            Minimum Temp : {weatherData != null ? weatherData.main.temp_min : "--.--"} °C <br/>
+            <h3>Current Weather</h3>
+            <div className="sky">
+                {weatherData != null ? weatherData.weather[0].main : "SKY"}
+            </div>
+            <div className="temp">{weatherData != null ? weatherData.main.temp : "--.--"}°C </div><br />
+            <div>
+                Feel : {weatherData != null ? weatherData.main.feels_like : "--.--"}°C
+            </div>
+            <span>
+                <div>
+                    Max : {weatherData != null ? weatherData.main.temp_max : "--.--"} °C
+                </div>
+                <div>
+                    Min : {weatherData != null ? weatherData.main.temp_min : "--.--"} °C
+                </div>
+            </span>
         </div>
     )
 }

@@ -7,9 +7,9 @@ import './_forecast_helper.css';
 
 
 
-function _forecast_helper({ date, temp }) {
+function _forecast_helper({ date, temp, sky }) {
 
-    const _date = new Date(date).toLocaleString('en-IN', { weekday: 'short', hour: 'numeric', hour12: true });
+    const _date = new Date(date).toLocaleString('en-IN', { weekday: 'short', hour: 'numeric', hour12: true }).toUpperCase();
 
     return (
         <div className="helperStyle">
@@ -18,6 +18,9 @@ function _forecast_helper({ date, temp }) {
             </div>
             <div>
                 {_date}
+            </div>
+            <div>
+                {sky}
             </div>
 
         </div>

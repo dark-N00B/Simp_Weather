@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Login.css';
-//import Weather from './Weather';
 import { Redirect } from 'react-router';
 import { useSelector, useDispatch } from 'react-redux';
 import { isLoggedIn } from '../redux/actions';

@@ -20,40 +20,41 @@ function Weather() {
     const [showPanel, setShowPanel] = useState(false);
     const isLogged = useSelector(state => state.isLogged)
     console.log(isLogged);
-    //const [exit, setExit] = useState(false);
-    
+
     function logoutHandler() {
         dispatch(isLoggedIn());
-        
+
 
     }
-    
+
     return (
         <>
-            {!isLogged ? /*<Unauthorized />*/ <Redirect to='/' /> : <div className="mainDiv">
-                {showPanel ? <AboutPanel /> : <></>}
-                <div className="weatherDiv">
-                    <div className="cityDiv">
-                        <h1>Weather</h1>
-                        <select className="cityDropdown" onChange={(e) => setCity(e.target.value)}>
-                            {cityArray.map((item, key) => {
-                                return <option key={key} value={item}>{item}</option>
-                            })}
-                        </select>
-                    </div>
-                    <div className="weatherInfo">
-                        <div className="currentWeatherDiv">
-                            <Current city={city} />
+            {!isLogged ?
+            /*<Unauthorized />*/ <Redirect to='/' /> :
+                <div className="mainDiv">
+                    {showPanel ? <AboutPanel /> : <></>}
+                    <div className="weatherDiv">
+                        <div className="cityDiv">
+                            <h1>Weather</h1>
+                            <select className="cityDropdown" onChange={(e) => setCity(e.target.value)}>
+                                {cityArray.map((item, key) => {
+                                    return <option key={key} value={item}>{item}</option>
+                                })}
+                            </select>
                         </div>
-                        <div className="forecastDiv">
-                            <Forecast city={city} />
+                        <div className="weatherInfo">
+                            <div className="currentWeatherDiv">
+                                <Current city={city} />
+                            </div>
+                            <div className="forecastDiv">
+                                <Forecast city={city} />
+                            </div>
                         </div>
-                    </div>
-                    <button onClick={() => setShowPanel(!showPanel)} className="aboutBtn">About Us</button>
-                    <button onClick={function(){logoutHandler()}} className="logoutBtn" >Log Out</button>
+                        <button onClick={() => setShowPanel(!showPanel)} className="aboutBtn">About Us</button>
+                        <button onClick={function () { logoutHandler() }} className="logoutBtn" >Log Out</button>
 
-                </div>
-            </div>}
+                    </div>
+                </div>}
         </>
     )
 }
