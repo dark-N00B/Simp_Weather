@@ -19,7 +19,7 @@ function Forecast({ city }) {
             const jsonData = await response.json();
             const fiveDay = jsonData.list;
             //console.log(jsonData);
-            //console.log(fiveDay);
+            console.log(fiveDay);
             setForecastData(fiveDay);
         }
 
@@ -41,7 +41,7 @@ function Forecast({ city }) {
                         {forecastData.map((item, key) => {
                             return (
                                 <div className="forecastDays" /*style={skyImage(item.weather[0].main)}*/ key={key}>
-                                    <Helper temp={item.main.temp} date={item.dt_txt} sky={item.weather[0].description} />
+                                    <Helper temp={item.main.temp} date={item.dt_txt} sky={item.weather[0].description} skyIcon={item.weather[0].icon}/>
                                 </div>
                             )
                         })}

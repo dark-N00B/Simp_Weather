@@ -19,7 +19,7 @@ function Weather() {
     const [city, setCity] = useState('Delhi');
     const [showPanel, setShowPanel] = useState(false);
     const isLogged = useSelector(state => state.isLogged)
-    console.log(isLogged);
+    //console.log(isLogged);
 
     function logoutHandler() {
         dispatch(isLoggedIn());
