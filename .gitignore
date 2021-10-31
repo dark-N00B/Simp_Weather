@@ -25,3 +25,4 @@ yarn-error.log*
 
 # Personal Information
 API_KEY.js
+.env

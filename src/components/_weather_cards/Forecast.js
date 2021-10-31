@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import API_KEY from '../../API_KEY';
+import 'dotenv/config';
 import './Forecast.css'
 import Helper from './_forecast_helper';
 
@@ -15,7 +15,7 @@ function Forecast({ city }) {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric`);
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=metric`);
             const jsonData = await response.json();
             const fiveDay = jsonData.list;
             //console.log(jsonData);
