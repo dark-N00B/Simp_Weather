@@ -27,10 +27,16 @@ npm start
 
 ### Thanks to OpenWeather API
 
- - Create an .env file in the base folder and it should contain :
-```
-REACT_APP_API_KEY = Your OpenWeather API Key
-```
+ENVIRONMENT VARIABLES :
+| Variable Name     | Value       |
+| ----------------- | ----------- |
+|REACT_APP_API_KEY  | Yor OpenWeather API Key       |
+
+## Log in :
+
+| username    | password    |
+| ----------- | ----------- |
+| admin       | admin       |
 
 ## Deployment 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4c4aa0de-c5a6-4cc8-b43a-4b4b4ebbf200/deploy-status)](https://bit.ly/3msygWk)
