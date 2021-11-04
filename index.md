@@ -1,4 +1,4 @@
-# Simp Weather
+# [Simp Weather](https://simp-weather.netlify.app)
 ![App Version](https://img.shields.io/github/package-json/v/dark-N00B/Simp_Weather)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dark-N00B/Simp_Weather)
 ![GitHub](https://img.shields.io/github/license/dark-N00B/Simp_Weather)
