@@ -1,13 +1,13 @@
-# Weather-App
-![App Version](https://img.shields.io/github/package-json/v/dark-N00B/extraa-edge-assignment)
-![GitHub last commit](https://img.shields.io/github/last-commit/dark-N00B/extraa-edge-assignment)
-![GitHub](https://img.shields.io/github/license/dark-N00B/extraa-edge-assignment)
+# Simp Weather
+![App Version](https://img.shields.io/github/package-json/v/dark-N00B/Simp_Weather)
+![GitHub last commit](https://img.shields.io/github/last-commit/dark-N00B/Simp_Weather)
+![GitHub](https://img.shields.io/github/license/dark-N00B/Simp_Weather)
 
 ## Dependencies
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/dark-N00B/extraa-edge-assignment/react)
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/dark-N00B/extraa-edge-assignment/react-redux)
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/dark-N00B/extraa-edge-assignment/react-router-dom)
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/dark-N00B/extraa-edge-assignment/dotenv)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/dark-N00B/Simp_Weather/react)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/dark-N00B/Simp_Weather/react-redux)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/dark-N00B/Simp_Weather/react-router-dom)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/dark-N00B/Simp_Weather/dotenv)
 
 ## Made with ❤️ in React and Redux
 ### Features:
