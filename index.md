@@ -27,7 +27,8 @@ npm start
 
 ### Thanks to OpenWeather API
 
-ENVIRONMENT VARIABLES :
+#### ENVIRONMENT VARIABLES :
+
 | Variable Name     | Value                    |
 | ----------------- | ------------------------ |
 |REACT_APP_API_KEY  | Your OpenWeather API Key |
