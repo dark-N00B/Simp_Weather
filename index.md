@@ -1,4 +1,4 @@
-# [Simp Weather](https://simp-weather.netlify.app)
+# [Simp Weather](https://bit.ly/3o1Yq1P)
 ![App Version](https://img.shields.io/github/package-json/v/dark-N00B/Simp_Weather)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dark-N00B/Simp_Weather)
 ![GitHub](https://img.shields.io/github/license/dark-N00B/Simp_Weather)
@@ -40,4 +40,4 @@ npm start
 | admin       | admin       |
 
 ## Deployment 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4c4aa0de-c5a6-4cc8-b43a-4b4b4ebbf200/deploy-status)](https://bit.ly/3msygWk)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4c4aa0de-c5a6-4cc8-b43a-4b4b4ebbf200/deploy-status)](https://bit.ly/3o1Yq1P)
