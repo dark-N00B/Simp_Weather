@@ -31,7 +31,7 @@ npm start
 
 | Variable Name     | Value                    |
 | ----------------- | ------------------------ |
-|REACT_APP_API_KEY  | Your OpenWeather API Key |
+| REACT_APP_API_KEY | Your OpenWeather API Key |
 
 ## Log in :
 
