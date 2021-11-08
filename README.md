@@ -39,4 +39,4 @@ ENVIRONMENT VARIABLES :
 | admin       | admin       |
 
 ## Deployment 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4c4aa0de-c5a6-4cc8-b43a-4b4b4ebbf200/deploy-status)](https://bit.ly/3msygWk)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4c4aa0de-c5a6-4cc8-b43a-4b4b4ebbf200/deploy-status)](https://bit.ly/3o1Yq1P)
